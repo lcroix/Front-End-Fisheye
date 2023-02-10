@@ -74,3 +74,9 @@ form input {
     border: none;
     border-radius: 5px;
 }
+.photographer-card__img{
+    width: 20%;
+}
+.image {
+    width: 100%;
+}
