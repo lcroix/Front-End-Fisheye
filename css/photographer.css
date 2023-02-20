@@ -1,82 +1,193 @@
 #contact_modal {
-    display: none;
+  display: none;
 }
 
 .photograph-header {
-    background-color: #FAFAFA;
-    height: 300px;
-    margin: 0 100px;
+  background-color: #fafafa;
+  height: 300px;
+  margin: 0 170px;
 }
 
 .contact_button {
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
-    padding: 11px;
-    width: 170px;
-    height: 70px;
-    border: none;
-    background-color: #901C1C;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.modal {
-    border-radius: 5px;
-    background-color: #DB8876;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 35px;
-    margin: auto;
-}
-
-.modal header {
-    justify-content: space-between;
-    width: 100%;
-}
-
-.modal header img {
-    cursor: pointer;
-}
-
-.modal header h2 {
-    font-size: 64px;
-    font-weight: normal;
-    text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  padding: 11px;
+  width: 170px;
+  height: 70px;
+  border: none;
+  background-color: #901c1c;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 form {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    align-items: flex-start;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 form label {
-    color: #312E2E;
-    font-size: 36px;
+  color: #312E2E;
+  font-size: 36px;
 }
 
 form div {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: self-start;
-    margin-bottom: 26px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: self-start;
+  margin-bottom: 26px;
 }
 
 form input {
-    width: 100%;
-    height: 68px;
-    border: none;
-    border-radius: 5px;
+  width: 100%;
+  height: 68px;
+  border: none;
+  border-radius: 5px;
+  font-size: 36px;
 }
-.photographer-card__img{
-    width: 20%;
+
+form textarea {
+  width: 100%;
+  height: 170px;
+  border-radius: 5px;
+  resize: none;
+  font-size: 36px;
 }
-.image {
-    width: 100%;
+
+.input_validated {
+  border: 3px solid #279e7a;
+}
+
+.input_error {
+  border: 3px solid #fe142f;
+}
+
+#infos-lastname, #infos-firstname, #infos-email, #infos-message {
+  display: none;
+  font-size: 16px;
+  margin: 0px;
+}
+
+#contact_modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background: rgba(196, 196, 196, 0.4);
+}
+#contact_modal .modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  background-color: #DB8876;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 35px;
+  margin: auto;
+  font-size: 36px;
+}
+#contact_modal .modal header {
+  justify-content: space-between;
+  width: 100%;
+}
+#contact_modal .modal header img {
+  cursor: pointer;
+}
+#contact_modal .modal header h2 {
+  font-size: 64px;
+  font-weight: normal;
+  text-align: center;
+}
+
+.card img {
+  width: 350px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.card video {
+  width: 350px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.photographer-card {
+  background-color: #fafafa;
+  margin: 0 100px;
+  padding: 50px 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.photographer-card h2 {
+  font-size: 64px;
+  font-weight: 400;
+  margin: 0px;
+  padding: 0px;
+  color: #d3573c;
+}
+.photographer-card .location {
+  display: flex;
+  font-weight: 400;
+  font-size: 24px;
+  color: #901c1c;
+}
+.photographer-card__city {
+  margin-right: 5px;
+}
+.photographer-card p {
+  font-weight: 400;
+  font-size: 18px;
+  color: #525252;
+}
+.photographer-card img {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.photographerGallery {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 100px;
+  gap: 95px;
+}
+.title {
+  
+  margin: 0;
+  color: #901c1c;
+  font-size: 24px;
+}
+i {
+  font-size: 24px;
+  color: #901C1C;
+  cursor: pointer;
+}
+.card_footer {
+  display: flex;
+  justify-content: space-between;
+}
+.likeCount{
+  display: flex;
+  
+}
+#likes {
+  margin: 0 10px 0 0;
+  color: #901C1C;
+  font-size: 24px;
 }

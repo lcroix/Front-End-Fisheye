@@ -5,17 +5,19 @@
     <meta charset="utf-8">
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f614a106f9.js" crossorigin="anonymous"></script>
     <title>Fisheye - photographe </title>
   </head>
   <body>
     <header>
+      <a href="/index.html">
       <img src="assets/images/logo.png" class="logo" />
+    </a>
     </header>
     <main id="main">
       <div class="photograph-header">
         <div class="onPhotographer_section">
-
-          <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
+          
         </div>
         <div class="photographerGallery"></div>
       </div>
@@ -26,12 +28,22 @@
           <h2>Contactez-moi</h2>
           <img src="assets/icons/close.svg" onclick="closeModal()" />
         </header>
-				<form>
+				<form name="send_message" action="photographer.html" id="modal-form" method="get">
 					<div>
-						<label>Prénom</label>
-						<input />
+						<label for="firstname">Prénom</label>
+						<input type="text" name="firstname" id="firstname" required>
+            <div id="infos-firstname"></div>
+            <label for="lastname">Nom</label>
+						<input type="text" name="lastname" id="lastname" required>
+            <div id="infos-lastname"></div>
+            <label for="email">Email</label>
+						<input type="email" name="email" id="email" required>
+            <div id="infos-email"></div>
+            <label for="message" required>Votre message</label>
+						<textarea id="message" name="message" required></textarea>
+            <div id="infos-message"></div>
 					</div>
-          <button class="contact_button">Envoyer</button>
+          <button class="contact_button" type="submit">Envoyer</button>
 				</form>
 			</div>
 		</div>
