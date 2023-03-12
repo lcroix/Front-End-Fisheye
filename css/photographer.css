@@ -136,6 +136,7 @@ form textarea {
 }
 .photographer-card h2 {
   font-size: 64px;
+  text-align: center;
   font-weight: 400;
   margin: 0px;
   padding: 0px;
@@ -167,7 +168,7 @@ form textarea {
   margin: 100px;
   gap: 95px;
 }
-.title {
+.media_title {
   
   margin: 0;
   color: #901c1c;
@@ -177,17 +178,126 @@ i {
   font-size: 24px;
   color: #901C1C;
   cursor: pointer;
+  margin-left: 10px;
 }
 .card_footer {
   display: flex;
   justify-content: space-between;
 }
-.likeCount{
+.like{
   display: flex;
+  justify-content: space-between;
   
 }
-#likes {
-  margin: 0 10px 0 0;
+#lightbox_modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: rgb(255, 255, 255);
+}
+#lightbox_modal .modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 36px;
+}
+#lightbox_modal .modal .prev i, #lightbox_modal .modal .next i {
+  color: #901C1C;
+}
+#lightbox_modal .modal .prev {
+  margin-left: 120px;
+}
+#lightbox_modal .modal .next {
+  margin-right: 120px;
+}
+#lightbox_modal .modal .close_modal {
+  color: #901C1C;
+  position: fixed;
+  right: 50px;
+  top: 50px;
+}
+#lightbox_modal .modal .modal_content {
+  position: absolute;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  max-width: 1200px;
+}
+#lightbox_modal .modal .lightbox_slide {
+  display: none;
+}
+#lightbox_modal .modal .lightbox_slide img {
+  max-width: 100%;
+  max-height: 700px;
+  border-radius: 5px;
+}
+#lightbox_modal .modal .lightbox_slide video {
+  max-width: 100%;
+  max-height: 700px;
+}
+#lightbox_modal .modal .lightbox_slide p {
+  color: #901C1C;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  margin: 0px;
+}
+
+ .media_likes{
   color: #901C1C;
   font-size: 24px;
+}
+.photograph_sticky {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  margin-right: 40px;
+  width: 380px;
+  background-color: #DB8876;
+  border-radius: 5px 5px 0px 0px;
+}
+.photograph_sticky span {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 70px;
+}
+.photograph_sticky .photograph_sticky_total_likes {
+  padding-left: 30px;
+}
+.photograph_sticky i {
+  padding-left: 5px;
+}
+.photograph_sticky .photograph_sticky_price {
+  position: absolute;
+  right: 0px;
+  padding-right: 30px;
+}
+.media-sorting-wrapper {
+  margin-top: 50px;
+  margin-left: 100px;
+}
+.media-sorting-wrapper label {
+  font-weight: 700;
+  font-size: 18px;
+  padding-right: 40px;
+}
+.media-sorting-wrapper select {
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 5px;
+  padding: 23px;
+  background: #901C1C;
+  color: white;
+  width: 170px;
 }

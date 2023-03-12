@@ -26,26 +26,32 @@ async function getonePhotographers() {
 }
 async function getMediaFind () {
   const data = await fetchMediaById()
-  console.log(data);
   return data
 
 }
 async function displayData(donnees) {
-  console.log(donnees);
   const onPhotographe = document.querySelector(".onPhotographer_section");
   const photographeDOM = getPhotographer(donnees);
+  
   onPhotographe.appendChild(photographeDOM);
   
 }
 
 async function init() {
   const medias = await getMediaFind()
+  let nbMedia = 0;
+  let total_likes = 0;
+  const total_likes_section = document.querySelector(".photograph_sticky_total_likes");
   for(const media of medias) {
     const galerieSection = document.querySelector(".photographerGallery")
-    const card = getMedias(media)
+    total_likes += media.likes; 
+    nbMedia++;
+    const card = getMedias(media,nbMedia-1)
     galerieSection.appendChild(card)
    
   }
+  total_likes_section.textContent = total_likes;
+
   const donnees = await getonePhotographers();
   displayData(donnees, medias);
 }

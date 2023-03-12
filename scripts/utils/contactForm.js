@@ -43,7 +43,7 @@ function checkName() {
     // We check if the value is equal or greater than 2 characters & if the value is not null
     if (this.value.length >= 2 && this.value != null) {
         // We check with regex if there is no numbers [0-9] in the value
-        if (!(/^[a-zA-Z-\s]+$/.test(this.value))) {
+        if (!(/d/.test(this.value))) {
             display_valid(this);
             return true;
         }
