@@ -11,19 +11,21 @@ function openLightboxModal() {
   document.getElementById('lightbox_modal').focus();
 
   // We listen escape, arrow left and arrow right to navigate in the lightbox / close lightbox
-  document.addEventListener('keydown', function eventHandler(e) {
-      if (e.key === 'Escape') {
-          closeLightboxModal();
-          document.removeEventListener('keydown', eventHandler);
-      } else if (e.key === 'ArrowLeft') {
-          plusSlides(-1);
-      } else if (e.key === 'ArrowRight') {
-          plusSlides(1);
-      }
-  });
+  // mettre dans une fonction
+  document.addEventListener('keydown',eventHandler); 
+}
+function eventHandler(e) {
+  if (e.key === 'Escape') {
+      closeLightboxModal();
+  } else if (e.key === 'ArrowLeft') {
+      plusSlides(-1);
+  } else if (e.key === 'ArrowRight') {
+      plusSlides(1);
+  }
 }
 
 function closeLightboxModal() {
+  document.removeEventListener('keydown', eventHandler);
   document.getElementById("lightbox_modal").style.display = "none";
   document.body.style.overflow = "auto";
 }

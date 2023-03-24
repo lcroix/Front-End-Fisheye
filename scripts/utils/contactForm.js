@@ -7,11 +7,18 @@ const submitForm = document.querySelector("#modal-form");
 function displayModal() {
     const modal = document.getElementById("contact_modal");
 	modal.style.display = "block";
+    document.addEventListener('keydown', function eventHandler(e) {
+        if (e.key === 'Escape') {
+            closeModal();
+            document.removeEventListener('keydown', eventHandler);
+        }
+    });
 }
 
 function closeModal() {
     const modal = document.getElementById("contact_modal");
     modal.style.display = "none";
+    
 }
 
 input_firstname.addEventListener("change", checkName);

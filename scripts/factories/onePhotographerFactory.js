@@ -50,16 +50,14 @@ function getPhotographer(data) {
   return presentationProfile;
 }
 
-function getMedias(media, nb) {
+function getMedia(media, nb) {
   const { id, title, image, likes, date, price, video, photographerId } = media;
   const nbOfMedia = nb;
-  console.log(nbOfMedia);
   const imgSrc = `./assets/photographers/${photographerId}/${image}`;
   const vidSrc = `./assets/photographers/${photographerId}/${video}`;
   const lightbox = document.querySelector(".modal-content");
   const lightbox_div = document.createElement("div");
   lightbox_div.setAttribute("class", "lightbox_slide");
-  console.log(photographerId);
   // image est vidéo
 
   const card = document.createElement("a");
@@ -93,6 +91,7 @@ function getMedias(media, nb) {
       e.preventDefault();
       currentSlide(nbOfMedia);
       openLightboxModal();
+      
     });
     // vid.controls = true
     vid.muted = false;
@@ -171,7 +170,7 @@ function getMedias(media, nb) {
     likes_span.innerHTML =
       likes_counter.likes + "<i class='fa-solid fa-heart'></i>";
   });
-  // viré le p et le h3 et mttre le style au likes_span
+
   title_container.appendChild(title_span);
   title_container.appendChild(likes_span);
   card.appendChild(title_container);
