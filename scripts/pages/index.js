@@ -6,9 +6,7 @@ async function fetchPhotographer() {
 
 async function getPhotographers() {
   let donnees = await fetchPhotographer();
-  console.log(donnees);
   let photographers = donnees.photographers;
-  console.log(photographers);
   return { photographers: [...photographers] };
 }
 

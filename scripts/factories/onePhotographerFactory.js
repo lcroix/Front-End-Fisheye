@@ -160,7 +160,6 @@ function getMedia(media, nb) {
       total_likes_boolean = true;
       total_likes.innerHTML = parseInt(total_likes.innerHTML, 10) + 1;
 
-      console.log(likes_counter);
     } else {
       likes_span.innerHTML = likes_span.likes - 1;
       total_likes.innerHTML = parseInt(total_likes.innerHTML, 10) - 1;

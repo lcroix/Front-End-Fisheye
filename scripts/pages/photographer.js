@@ -2,7 +2,6 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const photographer_id = urlParams.get("id");
 let displayMediaAlreadyCalled = false;
-console.log(photographer_id);
 
 async function fetchPhotographerById() {
   const response = await fetch("../../data/photographers.json");
@@ -16,14 +15,12 @@ async function fetchMediaById() {
   const response = await fetch("../../data/photographers.json");
   const responseJSON = await response.json();
   const medias = responseJSON.media.filter((x) => x.photographerId == photographer_id)
-  console.log(medias);
   filterMedia(medias);
   return medias
 }
 
 async function getonePhotographers() {
   const donnees = await fetchPhotographerById();
-  console.log(donnees);
   return donnees;
 }
 async function getMediaFind () {
