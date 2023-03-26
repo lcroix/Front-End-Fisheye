@@ -3,8 +3,11 @@ const input_lastname = document.getElementById("lastname");
 const input_email = document.getElementById("email");
 const textarea_message = document.getElementById("message");
 const submitForm = document.querySelector("#modal-form");
+const nom=  document.querySelector('#nom')
 
-function displayModal() {
+function displayModal(name) {
+    console.log(name);
+    nom.innerHTML= `Contactez-moi </br> ${name}`
     const modal = document.getElementById("contact_modal");
 	modal.style.display = "block";
     document.addEventListener('keydown', function eventHandler(e) {

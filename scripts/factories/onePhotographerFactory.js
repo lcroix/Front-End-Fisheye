@@ -33,10 +33,11 @@ function getPhotographer(data) {
   presentationTagline.textContent = tagline;
 
   //attribute
-  contact.setAttribute("onclick", "displayModal()");
+  contact.setAttribute("onclick",`displayModal('${name}')`);
   contact.textContent = "Contactez-moi";
   presentationImg.setAttribute("src", picture);
   presentationImg.setAttribute("alt", `photo de la photographe ${name}`);
+
 
   // ajout des éléments enfant a la presentaion profile
   presentationProfile.appendChild(presentationInfo);
@@ -154,15 +155,17 @@ function getMedia(media, nb) {
 
   likes_span.addEventListener("click", () => {
     let total_likes = document.querySelector(".photograph_sticky_total_likes");
-
+    
     if (total_likes_boolean === false) {
       likes_span.likes = likes_span.likes + 1;
+      likes_span.style.color = 'blue';
       total_likes_boolean = true;
       total_likes.innerHTML = parseInt(total_likes.innerHTML, 10) + 1;
 
     } else {
       likes_span.innerHTML = likes_span.likes - 1;
       total_likes.innerHTML = parseInt(total_likes.innerHTML, 10) - 1;
+      likes_span.style.color = '#901c1c'
       total_likes_boolean = false;
     }
     likes_counter.like();
