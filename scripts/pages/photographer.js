@@ -4,7 +4,7 @@ const photographer_id = urlParams.get("id");
 let displayMediaAlreadyCalled = false;
 
 async function fetchPhotographerById() {
-  const response = await fetch("data//photographers.json");
+  const response = await fetch("data/photographers.json");
   const responseJSON = await response.json();
   const dataPhotographe = responseJSON.photographers.find(
     (x) => x.id == photographer_id
@@ -12,7 +12,7 @@ async function fetchPhotographerById() {
   return dataPhotographe;
 }
 async function fetchMediaById() {
-  const response = await fetch("data//photographers.json");
+  const response = await fetch("data/photographers.json");
   const responseJSON = await response.json();
   const medias = responseJSON.media.filter((x) => x.photographerId == photographer_id)
   filterMedia(medias);
