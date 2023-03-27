@@ -6,7 +6,6 @@ const submitForm = document.querySelector("#modal-form");
 const nom=  document.querySelector('#nom')
 
 function displayModal(name) {
-    console.log(name);
     nom.innerHTML= `Contactez-moi </br> ${name}`
     const modal = document.getElementById("contact_modal");
 	modal.style.display = "block";
